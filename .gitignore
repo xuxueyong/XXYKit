@@ -1,5 +1,9 @@
-123.txt
-111
+[core]
+    attributesfile = ~/.gitattributes
+[diff "exif"]
+    textconv = exiftool
+[diff "plist"]
+    textconv = plutil -convert xml1 -o -
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
