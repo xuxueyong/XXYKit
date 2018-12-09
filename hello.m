@@ -12,13 +12,3 @@ class hello {
     }
 }
 
-
-class VeryGood {
-    
-    var text:String?
-    var goods: [good]?
-    
-    init() {
-        
-    }
-}
