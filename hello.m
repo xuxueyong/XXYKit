@@ -15,8 +15,6 @@ class hello {
 class World {
     
     var text:String?
-    
-    var text:String?
     init() {
         
     }
