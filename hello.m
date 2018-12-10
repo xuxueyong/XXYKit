@@ -18,6 +18,5 @@ class World {
     init() {
         
     }
-    var text:String?
 }
 
