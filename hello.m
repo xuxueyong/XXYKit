@@ -6,6 +6,7 @@ class hello {
     
     var text:String?
 jksjds
+    //安静很多事`
         
 }
 
