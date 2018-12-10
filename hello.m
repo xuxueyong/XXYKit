@@ -6,8 +6,6 @@ class hello {
     
     var text:String?
     
-    
-    init() {
         
 }
 
