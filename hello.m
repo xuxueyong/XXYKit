@@ -5,7 +5,17 @@
 class hello {
     
     var text:String?
-    var goods: [good]?
+    
+    
+    init() {
+        
+    }
+}
+
+class World {
+    
+    var text:String?
+    
     
     init() {
         
