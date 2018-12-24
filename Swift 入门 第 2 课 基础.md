@@ -394,6 +394,113 @@ if let contant1 = optionValue1, let contant2 = optionValue2, let contant3 = opti
 }
 ```
 
+#####隐式解析可选类型
+当一个可选类型被第一次赋值之后， 就可以保证以后都有值， 就可以声明隐式解析可选类型。（implicitly unwrapped optionals）隐式解析可选类型主要被用于来的构造过程中。
+
+一个隐式解析可选类型声明时， 用！替换？。使用时， 不需要可选解析， 直接可以获取到值。
+
+下面解释了可选类型 String？ 和隐式解析可选类型 String！ 之间的区别
+
+```
+let possibleString: String? = "An optional string."
+let forcedString: String = possibleString! // 需要感叹号来获取值
+
+let assumedString: String! = "An implicitly unwrapped optional string."
+let implicitString: String = assumedString  // 不需要感叹号
+```
+隐式解析可选类型， 可以被当做是自动解析的可选类型。
+>注意：
+>如果隐式解析可选类型没有被赋值， 然后取值得时候， 会发生运行时错误（崩溃）， 和使用强制解包 ！一样。
+
+当然你也可以使用 if 来判断它是否有值
+
+```
+if assumedString != nil {
+    print(assumedString)
+}
+// 输出 "An implicitly unwrapped optional string."
+```
+也可用普通可选类型的可选绑定来解析它的值
+
+```
+if let definiteString = assumedString {
+    print(definiteString)
+}
+// 输出 "An implicitly unwrapped optional string."
+```
+
+>注意：
+>如果一个变量要在使用过程中被置为 nil 的话， 请不要使用隐式解析可选类型。如果一个变量的生命周期中，需要判断为 nil， 也优先使用普可选类型。
+
+####错误处理
+你可以使用 错误处理（error handling） 来应对程序执行中可能会遇到的错误条件。
+
+```
+func canThrowAnError() throws {
+    // 这个函数有可能抛出错误
+}
+```
+一个函数可以通过在声明中添加 throws 关键词来抛出错误消息。当你的函数能抛出错误消息时，你应该在表达式中前置 try 关键词。
+
+```
+do {
+    try canThrowAnError()
+    // 没有错误消息抛出
+} catch {
+    // 有一个错误消息抛出
+}
+```
+
+一个 do 语句创建了一个新的包含作用域，使得错误能被传播到一个或多个 catch 从句。
+
+这里有一个错误处理如何用来应对不同错误条件的例子。
+
+```
+func makeASandwich() throws {
+    // ...
+}
+
+do {
+    try makeASandwich()
+    eatASandwich()
+} catch SandwichError.outOfCleanDishes {
+    washDishes()
+} catch SandwichError.missingIngredients(let ingredients) {
+    buyGroceries(ingredients)
+}
+```
+在此例中，makeASandwich()（做一个三明治）函数会抛出一个错误消息如果没有干净的盘子或者某个原料缺失。因为 makeASandwich() 抛出错误，函数调用被包裹在 try 表达式中。将函数包裹在一个 do 语句中，任何被抛出的错误会被传播到提供的 catch 从句中。
+
+如果没有错误被抛出，eatASandwich() 函数会被调用。如果一个匹配 SandwichError.outOfCleanDishes 的错误被抛出，washDishes() 函数会被调用。如果一个匹配 SandwichError.missingIngredients 的错误被抛出，buyGroceries(_:) 函数会被调用，并且使用 catch 所捕捉到的关联值 [String] 作为参数。
+
+抛出，捕捉，以及传播错误会在**错误处理**章节详细说明。
+
+#####断言和先决条件
+断言 assert 和先决条件都为 为 true 程序继续执行， 为 false 的时候， 中断
+
+断言和先决条件是保证程序必须为 true 的条件下去执行的操作， 是帮助开发者， 写出更更安全的代码。和错误处理不一样， 错误处理是程序产生的一些无法避免的异常情况。执行中断，是为了防止无效的状态导致系统进一步的造成伤害。
+
+断言和先决条件的不同点在于， 它们什么时候进行状态监测， 断言是只在调试环境进行， 而先决条件是在调试和生产环境都进行的。在生产环境， 不会对断言进行评估， 这意味着可以在开发阶段可以使用很短断言， 在生产环境不受影响。
+
+####使用断言进行调试
+
+```
+let age = -3
+assert(age >= 0, "A person's age cannot be less than zero")
+// 因为 age < 0，所以断言会触发
+```
+####强制执行先决条件
+
+```
+// 在一个下标的实现里...
+precondition(index > 0, "Index must be greater than zero.")
+```
+>注意
+>如果你使用 unchecked 模式（-Ounchecked）编译代码，先决条件将不会进行检查。编译器假设所有的先决条件总是为 true（真），他将优化你的代码。然而，fatalError(_:file:line:) 函数总是中断执行，无论你怎么进行优化设定。
+>你能使用 fatalError(_:file:line:) 函数在设计原型和早期开发阶段，这个阶段只有方法的声明，但是没有具体实现，你可以在方法体>中写上 fatalError("Unimplemented")作为具体实现。因为 fatalError 不会像断言和先决条件那样被优化掉，**所以你可以确保当代码执行到一个没有被实现的方法时，程序会被中断。**
+
+
+
 
 
 
