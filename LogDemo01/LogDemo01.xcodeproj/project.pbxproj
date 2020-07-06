@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F20A7085185EB906380E734 /* Pods_LogDemo01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D582F893BB22A9032072C25C /* Pods_LogDemo01.framework */; };
+		EDF2132B24B32DFA004BE1CB /* Model_db_List.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2132A24B32DFA004BE1CB /* Model_db_List.m */; };
 		EDFC6A4924400E750023F809 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFC6A4824400E750023F809 /* AppDelegate.m */; };
 		EDFC6A4C24400E750023F809 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFC6A4B24400E750023F809 /* ViewController.m */; };
 		EDFC6A4F24400E750023F809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFC6A4D24400E750023F809 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 		88B88162E1F6DFC942EC4373 /* Pods-LogDemo01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogDemo01.release.xcconfig"; path = "Target Support Files/Pods-LogDemo01/Pods-LogDemo01.release.xcconfig"; sourceTree = "<group>"; };
 		D582F893BB22A9032072C25C /* Pods_LogDemo01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogDemo01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1888F12472207B0020E101 /* LogDemo01.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LogDemo01.entitlements; sourceTree = "<group>"; };
+		EDF2132924B32DFA004BE1CB /* Model_db_List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model_db_List.h; sourceTree = "<group>"; };
+		EDF2132A24B32DFA004BE1CB /* Model_db_List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model_db_List.m; sourceTree = "<group>"; };
 		EDFC6A4424400E750023F809 /* LogDemo01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogDemo01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFC6A4724400E750023F809 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDFC6A4824400E750023F809 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				EDFC6A67244018CA0023F809 /* JHEventLogger.m */,
 				EDFC6A692440191C0023F809 /* JHEventFormatter.h */,
 				EDFC6A6A2440191C0023F809 /* JHEventFormatter.m */,
+				EDF2132924B32DFA004BE1CB /* Model_db_List.h */,
+				EDF2132A24B32DFA004BE1CB /* Model_db_List.m */,
 			);
 			path = LogDemo01;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				EDFC6A62244013A10023F809 /* MyCunstomFormatter.m in Sources */,
 				EDFC6A4C24400E750023F809 /* ViewController.m in Sources */,
 				EDFC6A6B2440191C0023F809 /* JHEventFormatter.m in Sources */,
+				EDF2132B24B32DFA004BE1CB /* Model_db_List.m in Sources */,
 				EDFC6A5724400E750023F809 /* main.m in Sources */,
 				EDFC6A4924400E750023F809 /* AppDelegate.m in Sources */,
 			);

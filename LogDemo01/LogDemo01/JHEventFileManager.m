@@ -10,6 +10,13 @@
 
 @implementation JHEventFileManager
 
++ (NSString *)customLogsPath {
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"%@", path);
+    NSString *LogesPath = [path stringByAppendingString:@"/Logs/locationTracker"];
+    return LogesPath;
+}
+
 - (void)didArchiveLogFile:(NSString *)logFilePath
 {
     

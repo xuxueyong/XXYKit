@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JHEventFileManager : DDLogFileManagerDefault
 
++ (NSString *)customLogsPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

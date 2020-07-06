@@ -25,13 +25,14 @@
     
     [DDLog addLogger:[DDOSLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    JHEventFileManager *fileManager = [[JHEventFileManager alloc] init];    //自定义日志文件管理
+    // 自定义存储目录位置
+    JHEventFileManager *fileManager = [[JHEventFileManager alloc] initWithLogsDirectory:[JHEventFileManager customLogsPath]];    //自定义日志文件管理
     JHEventLogger *fileLogger = [[JHEventLogger alloc] initWithLogFileManager:fileManager]; //自定义文件Logger
-    fileLogger.rollingFrequency = 60 * 60 * 24; // 有效期是24小时
-    fileLogger.logFileManager.maximumNumberOfLogFiles = 2;  //最多文件数量为2个
+    fileLogger.rollingFrequency = 2 * 60 * 60 * 24; // 有效期是48小时
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 10;  //最多文件数量为10个
     fileLogger.logFormatter = [[JHEventFormatter alloc] init];  //日志消息格式化
-    fileLogger.maximumFileSize = 1024*50;   //每个文件数量最大尺寸为50k
-    fileLogger.logFileManager.logFilesDiskQuota = 200*1024;     //所有文件的尺寸最大为200k
+    fileLogger.maximumFileSize = 1024*1024;   //每个文件数量最大尺寸为1M
+    fileLogger.logFileManager.logFilesDiskQuota = 10*1024*1024;     //所有文件的尺寸最大为200k
     [DDLog addLogger:fileLogger];
     
     
