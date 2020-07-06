@@ -1,0 +1,22 @@
+{
+  "name": "YZJHybridSDK",
+  "version": "0.1.0",
+  "summary": "云之家混合应用SDK",
+  "description": "云之家混合应用SDK",
+  "homepage": "http://172.20.10.91/ios/YZJHybridSDK.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "1020146724@qq.com": "ding_qu@kingdee.com"
+  },
+  "source": {
+    "git": "https://github.com/1020146724@qq.com/YZJHybridSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "YZJHybridSDK/Classes/**/*"
+}

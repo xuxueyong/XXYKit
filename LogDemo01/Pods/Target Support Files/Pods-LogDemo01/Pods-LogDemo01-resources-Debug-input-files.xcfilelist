@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-LogDemo01/Pods-LogDemo01-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/YZJUIKit/YZJUIKit.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/YZJUIKit/YZJUIKit_voice.bundle
+${PODS_ROOT}/YZJUIKit/YZJUIKit/Assets/loading.bundle
