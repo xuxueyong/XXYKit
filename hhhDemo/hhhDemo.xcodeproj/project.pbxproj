@@ -21,6 +21,7 @@
 		EDE68CEC24ADBF80005D0E53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE68CEA24ADBF80005D0E53 /* LaunchScreen.storyboard */; };
 		EDE68CEF24ADBF80005D0E53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE68CEE24ADBF80005D0E53 /* main.m */; };
 		EDF2132E24B33663004BE1CB /* AVCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2132D24B33663004BE1CB /* AVCloudManager.m */; };
+		EDF2133124B42670004BE1CB /* SMsendEmailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2133024B42670004BE1CB /* SMsendEmailManager.m */; };
 		EF17802D177059738CF562F6 /* Pods_hhhDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85682A75ED05B038E88F376D /* Pods_hhhDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,8 @@
 		EDE68CEE24ADBF80005D0E53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDF2132C24B33663004BE1CB /* AVCloudManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCloudManager.h; sourceTree = "<group>"; };
 		EDF2132D24B33663004BE1CB /* AVCloudManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVCloudManager.m; sourceTree = "<group>"; };
+		EDF2132F24B42670004BE1CB /* SMsendEmailManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMsendEmailManager.h; sourceTree = "<group>"; };
+		EDF2133024B42670004BE1CB /* SMsendEmailManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMsendEmailManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				ED345B4924ADD43900DBC2D0 /* NSData+Base64Additions.m */,
 				ED345B4A24ADD43900DBC2D0 /* Base64Transcoder.m */,
 				ED345B4B24ADD43900DBC2D0 /* HSK_CFUtilities.m */,
+				EDF2132F24B42670004BE1CB /* SMsendEmailManager.h */,
+				EDF2133024B42670004BE1CB /* SMsendEmailManager.m */,
 			);
 			path = SMTPLibrary;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				EDE68CEF24ADBF80005D0E53 /* main.m in Sources */,
 				EDE68CE124ADBF7C005D0E53 /* SceneDelegate.m in Sources */,
 				ED345B4C24ADD43900DBC2D0 /* NSStream+SKPSMTPExtensions.m in Sources */,
+				EDF2133124B42670004BE1CB /* SMsendEmailManager.m in Sources */,
 				ED345B4F24ADD43900DBC2D0 /* Base64Transcoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

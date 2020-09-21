@@ -38,7 +38,8 @@
     JHEventVerbose(@"轨迹追踪--没有权限");
 }
 - (IBAction)event_3:(id)sender {
-    JHEventVerbose(@"轨迹追踪--数据上传成功");
+    NSString *typeStr = [NSString stringWithFormat:@"%ld", 1];
+    JHEventVerbose(@"开始发起单次定位，类型：%@", typeStr);
 }
 
 - (NSMutableArray *)filePathArray:(NSString *)directoryPath

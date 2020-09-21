@@ -54,8 +54,8 @@
     
     NSDictionary *xlsPart;
     // 2.2、附件 - txt
-    xlsPart = @{kSKPSMTPPartContentTypeKey:@"text/directory;\r\n\tx-unix-mode=0644;\r\n\tname=\"text.txt\"",
-                kSKPSMTPPartContentDispositionKey:@"attachment;\r\n\tfilename=\"text.txt\"",
+    xlsPart = @{kSKPSMTPPartContentTypeKey:@"text/directory;\r\n\tx-unix-mode=0644;\r\n\tname=\"临港云.xls\"",
+                kSKPSMTPPartContentDispositionKey:@"attachment;\r\n\tfilename=\"临港云.xls\"",
                 kSKPSMTPPartMessageKey:[fileData encodeBase64ForData],
                 kSKPSMTPPartContentTransferEncodingKey:@"base64"};
     
